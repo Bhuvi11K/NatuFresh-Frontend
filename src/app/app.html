@@ -20,15 +20,15 @@
 
   <!-- Actions -->
   <div class="nav-actions flex items-center gap-4">
-    <a class="nav-link flex items-center gap-1" routerLink="/profile">
+    <a class="nav-link flex items-center gap-1" routerLink="/profile" routerLinkActive="active">
       <span class="material-icons">person_outline</span>
       <span class="nav-label">Account</span>
     </a>
-    <a class="nav-link flex items-center gap-1" routerLink="/wishlist">
+    <a class="nav-link flex items-center gap-1" routerLink="/wishlist" routerLinkActive="active">
       <span class="material-icons">favorite_border</span>
       <span class="nav-label">Wishlist</span>
     </a>
-    <a class="nav-link cart-link flex items-center gap-1" routerLink="/cart">
+    <a class="nav-link cart-link flex items-center gap-1" routerLink="/cart" routerLinkActive="active">
       <span class="material-icons">shopping_cart</span>
       <span class="nav-label">Cart</span>
       @if (cartService.cartCount() > 0) {

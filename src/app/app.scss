@@ -88,7 +88,8 @@
     transition: color .2s ease;
   }
 
-  &:hover {
+  &:hover,
+  &.active {
     color: var(--color-primary);
 
     .material-icons {
