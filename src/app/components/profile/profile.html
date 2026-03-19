@@ -8,7 +8,7 @@
       <h1 class="profile-name">{{ user.name }}</h1>
       <p class="profile-email">{{ user.email }}</p>
       <span class="member-badge">
-        <span class="material-icons" style="font-size:14px;">star</span>
+        <span class="material-icons" style="font-size: 14px">star</span>
         Member since {{ user.memberSince }}
       </span>
     </div>
@@ -16,10 +16,18 @@
 
   <!-- ═══════ Tabs ═══════ -->
   <div class="tab-bar flex gap-1 mb-6">
-    <button class="tab-btn" [class.active]="activeTab() === 'personal'" (click)="switchTab('personal')">
+    <button
+      class="tab-btn"
+      [class.active]="activeTab() === 'personal'"
+      (click)="switchTab('personal')"
+    >
       <span class="material-icons">person</span> Personal Info
     </button>
-    <button class="tab-btn" [class.active]="activeTab() === 'addresses'" (click)="switchTab('addresses')">
+    <button
+      class="tab-btn"
+      [class.active]="activeTab() === 'addresses'"
+      (click)="switchTab('addresses')"
+    >
       <span class="material-icons">location_on</span> Addresses
     </button>
     <button class="tab-btn" [class.active]="activeTab() === 'orders'" (click)="switchTab('orders')">
@@ -98,7 +106,7 @@
           <div class="address-card" [class.default]="addr.isDefault">
             <div class="addr-header flex items-center justify-between mb-2">
               <span class="addr-label">
-                <span class="material-icons" style="font-size:16px;">
+                <span class="material-icons" style="font-size: 16px">
                   {{ addr.label === 'Home' ? 'home' : 'work' }}
                 </span>
                 {{ addr.label }}
@@ -112,14 +120,18 @@
             <p class="addr-line">{{ addr.line2 }}</p>
             <p class="addr-line">{{ addr.city }}, {{ addr.state }} - {{ addr.pincode }}</p>
             <p class="addr-phone">
-              <span class="material-icons" style="font-size:14px;">phone</span>
+              <span class="material-icons" style="font-size: 14px">phone</span>
               {{ addr.phone }}
             </p>
             <div class="addr-actions flex gap-3 mt-3">
               @if (!addr.isDefault) {
-                <button class="addr-action-btn" (click)="setDefaultAddress(addr.id)">Set Default</button>
+                <button class="addr-action-btn" (click)="setDefaultAddress(addr.id)">
+                  Set Default
+                </button>
               }
-              <button class="addr-action-btn delete" (click)="deleteAddress(addr.id)">Delete</button>
+              <button class="addr-action-btn delete" (click)="deleteAddress(addr.id)">
+                Delete
+              </button>
             </div>
           </div>
         }
@@ -148,7 +160,10 @@
               <span class="status-badge" [style.background]="getStatusColor(order.status)">
                 {{ order.status }}
               </span>
-              <span class="material-icons expand-icon" [class.rotated]="expandedOrder() === order.id">
+              <span
+                class="material-icons expand-icon"
+                [class.rotated]="expandedOrder() === order.id"
+              >
                 expand_more
               </span>
             </div>
@@ -169,11 +184,11 @@
               </div>
               <div class="order-meta flex flex-wrap gap-4 mt-3">
                 <span class="meta-item">
-                  <span class="material-icons" style="font-size:14px;">payment</span>
+                  <span class="material-icons" style="font-size: 14px">payment</span>
                   {{ order.paymentMethod }}
                 </span>
                 <span class="meta-item">
-                  <span class="material-icons" style="font-size:14px;">location_on</span>
+                  <span class="material-icons" style="font-size: 14px">location_on</span>
                   {{ order.address.city }}
                 </span>
               </div>
