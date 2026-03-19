@@ -24,7 +24,7 @@
           <div class="cart-item flex gap-4">
             <!-- Product Visual -->
             <div class="item-image" [style.background]="getGradient(item.product.category)">
-              <span class="item-emoji">{{ getIcon(item.product.category) }}</span>
+              <img class="item-product-img" [src]="item.product.image" [alt]="item.product.name" />
             </div>
 
             <!-- Details -->

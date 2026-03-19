@@ -43,15 +43,4 @@ export class Wishlist {
     return gradients[category] || 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
   }
 
-  protected getIcon(category: string): string {
-    const icons: Record<string, string> = {
-      'Cold-Pressed Oils': '🫒',
-      'Ghee & Dairy': '🧈',
-      'Millets': '🌾',
-      'Powders': '🍃',
-      'Sweeteners': '🍯',
-      'Honey & Natural': '🐝',
-    };
-    return icons[category] || '🛒';
-  }
 }

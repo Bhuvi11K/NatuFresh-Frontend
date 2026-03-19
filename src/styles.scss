@@ -34,7 +34,7 @@ html {
         primary: mat.$azure-palette,
         tertiary: mat.$blue-palette,
       ),
-      typography: Roboto,
+      typography: Poppins,
       density: 0,
     )
   );
@@ -44,7 +44,7 @@ body {
   color-scheme: light;
   background-color: var(--color-bg);
   color: var(--color-text);
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Poppins', sans-serif;
   margin: 0;
   height: 100%;
   -webkit-font-smoothing: antialiased;

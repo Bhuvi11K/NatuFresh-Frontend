@@ -107,8 +107,11 @@
   flex-shrink: 0;
 }
 
-.item-emoji {
-  font-size: 2.5rem;
+.item-product-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
 }
 
 .item-name {
@@ -366,9 +369,7 @@
     height: 75px;
   }
 
-  .item-emoji {
-    font-size: 2rem;
-  }
+
 
   .cart-item {
     flex-direction: column;

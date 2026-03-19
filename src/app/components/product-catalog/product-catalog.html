@@ -53,7 +53,7 @@
             <span class="card-badge">{{ product.badge }}</span>
           }
           <span class="card-discount">-{{ getDiscount(product) }}%</span>
-          <div class="card-icon">{{ getIcon(product) }}</div>
+          <img class="card-image" [src]="product.image" [alt]="product.name" loading="lazy" />
           <button
             class="wishlist-btn"
             [class.wishlisted]="wishlistService.isInWishlist(product.id)"

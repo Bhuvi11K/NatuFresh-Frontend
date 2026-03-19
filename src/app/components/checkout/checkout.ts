@@ -23,7 +23,7 @@ export class Checkout {
 
   // Shipping form
   protected shippingForm = {
-    name: 'Bhuvanesh Kumar',
+    name: 'Bhuvanesh K',
     phone: '+91 98765 43210',
     line1: '42, Gandhipuram',
     line2: 'Near RS Puram Bus Stop',
@@ -44,13 +44,13 @@ export class Checkout {
 
   protected savedAddresses: Address[] = [
     {
-      id: 1, name: 'Bhuvanesh Kumar', phone: '+91 98765 43210',
+      id: 1, name: 'Bhuvanesh K', phone: '+91 98765 43210',
       line1: '42, Gandhipuram', line2: 'Near RS Puram Bus Stop',
       city: 'Coimbatore', state: 'Tamil Nadu', pincode: '641012',
       isDefault: true, label: 'Home',
     },
     {
-      id: 2, name: 'Bhuvanesh Kumar', phone: '+91 98765 43210',
+      id: 2, name: 'Bhuvanesh K', phone: '+91 98765 43210',
       line1: 'Tech Park, 3rd Floor', line2: 'Saravanampatti',
       city: 'Coimbatore', state: 'Tamil Nadu', pincode: '641035',
       isDefault: false, label: 'Work',
