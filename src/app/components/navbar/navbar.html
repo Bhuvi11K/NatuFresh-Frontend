@@ -1,6 +1,6 @@
 <!-- ═══════ Top Announcement Bar ═══════ -->
 <div class="announcement-bar flex items-center justify-center gap-2">
-  <span class="material-icons" style="font-size: 16px;">local_shipping</span>
+  <span class="material-icons" style="font-size: 16px">local_shipping</span>
   Free shipping on orders above ₹499 · Use code <strong>ORGANIC20</strong> for 20% off!
 </div>
 
@@ -20,20 +20,40 @@
 
   <!-- Actions -->
   <div class="nav-actions flex items-center gap-4">
-    <a class="nav-link flex items-center gap-1" routerLink="/profile" routerLinkActive="active">
-      <span class="material-icons">person_outline</span>
-      <span class="nav-label">Account</span>
-    </a>
     <a class="nav-link flex items-center gap-1" routerLink="/wishlist" routerLinkActive="active">
       <span class="material-icons">favorite_border</span>
       <span class="nav-label">Wishlist</span>
     </a>
-    <a class="nav-link cart-link flex items-center gap-1" routerLink="/cart" routerLinkActive="active">
+
+    <a
+      class="nav-link cart-link flex items-center gap-1"
+      routerLink="/cart"
+      routerLinkActive="active"
+    >
       <span class="material-icons">shopping_cart</span>
       <span class="nav-label">Cart</span>
       @if (cartService.cartCount() > 0) {
         <span class="cart-badge">{{ cartService.cartCount() }}</span>
       }
     </a>
+
+    @if (authService.isLoggedIn()) {
+      <a class="nav-link flex items-center gap-1" routerLink="/profile" routerLinkActive="active">
+        <span class="material-icons">person_outline</span>
+        <span class="nav-label">Account</span>
+      </a>
+      <button
+        class="nav-link flex items-center gap-1 bg-transparent border-none cursor-pointer p-0 m-0"
+        (click)="authService.logout()"
+      >
+        <span class="material-icons">logout</span>
+        <span class="nav-label">Logout</span>
+      </button>
+    } @else {
+      <a class="nav-link flex items-center gap-1" routerLink="/login" routerLinkActive="active">
+        <span class="material-icons">login</span>
+        <span class="nav-label">Login</span>
+      </a>
+    }
   </div>
 </nav>

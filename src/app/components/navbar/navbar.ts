@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { CartService } from '../../services/cart.service';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-navbar',
@@ -11,4 +12,5 @@ import { CartService } from '../../services/cart.service';
 })
 export class Navbar {
   protected readonly cartService = inject(CartService);
+  protected readonly authService = inject(AuthService);
 }
