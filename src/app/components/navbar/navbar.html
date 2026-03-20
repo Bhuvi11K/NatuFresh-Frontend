@@ -1,0 +1,39 @@
+<!-- ═══════ Top Announcement Bar ═══════ -->
+<div class="announcement-bar flex items-center justify-center gap-2">
+  <span class="material-icons" style="font-size: 16px;">local_shipping</span>
+  Free shipping on orders above ₹499 · Use code <strong>ORGANIC20</strong> for 20% off!
+</div>
+
+<!-- ═══════ Navbar ═══════ -->
+<nav class="navbar flex items-center justify-between px-6 py-3">
+  <!-- Logo -->
+  <a class="logo flex items-center gap-2" routerLink="/">
+    <span class="logo-icon">🌿</span>
+    <span class="logo-text">NatuFresh</span>
+  </a>
+
+  <!-- Search -->
+  <div class="search-bar flex items-center gap-2">
+    <span class="material-icons search-icon">search</span>
+    <input type="text" placeholder="Search organic products..." class="search-input" />
+  </div>
+
+  <!-- Actions -->
+  <div class="nav-actions flex items-center gap-4">
+    <a class="nav-link flex items-center gap-1" routerLink="/profile" routerLinkActive="active">
+      <span class="material-icons">person_outline</span>
+      <span class="nav-label">Account</span>
+    </a>
+    <a class="nav-link flex items-center gap-1" routerLink="/wishlist" routerLinkActive="active">
+      <span class="material-icons">favorite_border</span>
+      <span class="nav-label">Wishlist</span>
+    </a>
+    <a class="nav-link cart-link flex items-center gap-1" routerLink="/cart" routerLinkActive="active">
+      <span class="material-icons">shopping_cart</span>
+      <span class="nav-label">Cart</span>
+      @if (cartService.cartCount() > 0) {
+        <span class="cart-badge">{{ cartService.cartCount() }}</span>
+      }
+    </a>
+  </div>
+</nav>
